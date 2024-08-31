@@ -19,7 +19,6 @@ variable "common_tags" {
         Environment ="Dev"
         Terraform = "true"
     }
-
 }
 variable "sg_name" {
     type = string

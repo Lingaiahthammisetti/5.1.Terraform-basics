@@ -5,7 +5,6 @@ terraform {
       version = "5.58.0"
     }
   }
-
 backend "s3" {
   bucket ="lingaiah-remote-state"
   key="remote-state-demo"
@@ -13,7 +12,6 @@ backend "s3" {
   dynamodb_table="lingaiah-locking"
   }
 }
-
 provider "aws" {
   # Configuration options
   region = "us-east-1"

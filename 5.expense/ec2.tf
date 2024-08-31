@@ -1,7 +1,6 @@
 #resource <resource-type> <resource-name>
 
 resource "aws_instance" "expense" {
-
   count = length(var.instance_names)
   ami           = var.image_id
   vpc_security_group_ids = [aws_security_group.allow_ssh.id]
@@ -18,8 +17,7 @@ resource "aws_instance" "expense" {
 resource "aws_security_group" "allow_ssh" {
   name        = var.sg_name
   description = var.sg_description
-
-
+   
     ingress {
     from_port        = var.ssh_port
     to_port          = var.ssh_port
@@ -38,5 +36,4 @@ resource "aws_security_group" "allow_ssh" {
     Name = "allow_ssh"
     Createdby="Lingaiah"
   }
-
 }
