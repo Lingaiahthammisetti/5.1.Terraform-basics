@@ -3,7 +3,6 @@ resource "aws_instance" "db" {
   ami  = var.image_id
   instance_type = var.instance_type
   vpc_security_group_ids = [aws_security_group.allow_ssh.id]
-
   tags = var.tags
   
 }
@@ -27,8 +26,8 @@ resource "aws_security_group" "allow_ssh" {
   }
 
   tags = {
-    Name = "allow_ssh"
-    Createdby="Lingaiah Terraform"
+    Name = "Allow_SSH_Variables"
+    Createdby="Lingaiah"
   }
 
 }

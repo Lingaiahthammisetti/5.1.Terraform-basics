@@ -1,5 +1,4 @@
 variable "instance_names" {
     type = list
-    default = ["db","backend","frontend"]
-    
+    default = ["DB Server","Backend Server","Frontend Server"]
 }

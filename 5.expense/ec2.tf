@@ -3,7 +3,7 @@
 resource "aws_instance" "expense" {
   count = length(var.instance_names)
   ami           = var.image_id
-  vpc_security_group_ids = [aws_security_group.allow_ssh.id]
+  vpc_security_group_ids = [aws_security_group.allow_ssh_expense.id]
   instance_type = var.instance_names[count.index] == "db" ? "t3.small": "t3.micro"
 
   tags = merge (
@@ -11,10 +11,9 @@ resource "aws_instance" "expense" {
        Name = var.instance_names[count.index]
        Module = var.instance_names[count.index]
     }
-)
+ )
 }
-
-resource "aws_security_group" "allow_ssh" {
+resource "aws_security_group" "allow_ssh_expense" {
   name        = var.sg_name
   description = var.sg_description
    
@@ -24,7 +23,6 @@ resource "aws_security_group" "allow_ssh" {
     protocol         = var.protocol
     cidr_blocks      = var.allowed_cidr
     }
-
   egress {
     from_port        = 0
     to_port          = 0
@@ -33,7 +31,7 @@ resource "aws_security_group" "allow_ssh" {
   }
 
   tags = {
-    Name = "allow_ssh"
+    Name = "Allow_SSH_Expense"
     Createdby="Lingaiah"
   }
 }

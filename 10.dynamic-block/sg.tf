@@ -18,7 +18,7 @@ resource "aws_security_group" "allow_ports" {
       cidr_blocks      = ["0.0.0.0/0"]
     }
     tags = {
-      Name = "allow_ports"
-      Createdby="Lingaiah Terraform"
+      Name = "Dynamic_block_allow_ports"
+      Createdby="Lingaiah"
     }
 }

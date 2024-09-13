@@ -1,12 +1,11 @@
 #ec2 variables
-
 variable "instance_names" {
     type = list
     default = ["db","backend","frontend"]
 }
 variable "image_id" {
     type =string #optional
-    default = "ami-041e2ea9402c46c32" #optional
+    default = "ami-09c813fb71547fc4f" 
     description ="RHEL-9 AMI ID"  #optional
 }
 variable "instance_type" {
@@ -20,9 +19,10 @@ variable "common_tags" {
         Terraform = "true"
     }
 }
+#security group
 variable "sg_name" {
     type = string
-    default = "allow_ssh"
+    default = "allow_ssh_expense"
  }
  variable "sg_description" {
     type = string
@@ -30,11 +30,11 @@ variable "sg_name" {
  }
  variable "ssh_port" {
     type = number
-    default =22
+    default = 0  #22
  }
 variable "protocol"{
     type = string
-    default ="tcp"
+    default ="-1" #tcp
 }
 variable "allowed_cidr" {
     type=list(string)

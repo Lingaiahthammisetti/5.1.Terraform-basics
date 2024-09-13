@@ -1,12 +1,12 @@
 #resource <resource-type> <resource-name>
 
 resource "aws_instance" "db" {
-  ami           = "ami-041e2ea9402c46c32"
+  ami           =  "ami-09c813fb71547fc4f"
   instance_type = "t3.micro"
-  vpc_security_group_ids = ["sg-0b8c28fdd8f99cc89"]
+  vpc_security_group_ids = ["sg-0ccccafe3d4f0719e"]
 
   tags = {
-    Name = "HelloWorld-DB"
+    Name = "Hello-Ec2-Remote-State"
   }
 }
 

@@ -1,8 +1,10 @@
 
 resource "aws_route53_record" "expense" {
-    count = length(var.instance_names)
+    count = length(var.instance_names) #["db","backend","frontend"] count=3
     zone_id = var.zone_id
-    
+    #if instance name 'frontend' then domain_name = lingaiah.online 
+    #if instance name 'db' then domain_name = db.lingaiah.online 
+    #if instance name 'backend' then domain_name = backend.lingaiah.online 
     name = var.instance_names[count.index] == "frontend" ? var.domain_name : "${var.instance_names[count.index]}.${var.domain_name}"
     type = "A"
     ttl  = 1

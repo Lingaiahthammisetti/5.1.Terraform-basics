@@ -1,17 +1,17 @@
 #resource <resource-type> <resource-name>
 
-resource "aws_instance" "db" {
+resource "aws_instance" "ec2_count" {
   count = length(var.instance_names)
-  ami           = "ami-041e2ea9402c46c32"
+  ami           = "ami-09c813fb71547fc4f" 
   instance_type = "t2.micro"
-  vpc_security_group_ids = [aws_security_group.allow_ssh.id]
+  vpc_security_group_ids = [aws_security_group.allow_ssh_count.id]
 
   tags = {
     Name = var.instance_names[count.index]
   }
 }
 
-resource "aws_security_group" "allow_ssh" {
+resource "aws_security_group" "allow_ssh_count" {
   name        = "allow_ssh"
   description = "allowing SSH Access"
 
@@ -30,7 +30,7 @@ resource "aws_security_group" "allow_ssh" {
   }
 
   tags = {
-    Name = "allow_ssh"
+    Name = "Allow_SSH_Count"
     Createdby="Lingaiah"
   }
 }

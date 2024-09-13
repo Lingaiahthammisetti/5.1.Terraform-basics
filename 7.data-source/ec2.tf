@@ -1,11 +1,11 @@
 #resource <resource-type> <resource-name>
 
-resource "aws_instance" "db" {
+resource "aws_instance" "ec2-data-source" {
   ami = data.aws_ami.ami_id.id
-  vpc_security_group_ids = ["sg-0b8c28fdd8f99cc89"]
-  instance_type = "t3.micro"
+  vpc_security_group_ids = ["sg-0ccccafe3d4f0719e"]
+  instance_type = "t2.micro"
   tags = {
-           Name = "data-source-practice"
+           Name = "EC2-data-source"
   }
 }
 

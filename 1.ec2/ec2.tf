@@ -23,7 +23,7 @@ resource "aws_security_group" "allow_ssh" { //Here 'allow_ssh' is terraform reso
   }
 }
 resource "aws_instance" "db" { //Here 'db' is terraform resource name
-  ami           = "ami-041e2ea9402c46c32"
+  ami           = "ami-09c813fb71547fc4f"#"ami-041e2ea9402c46c32"
   instance_type = "t3.micro"
   vpc_security_group_ids = [aws_security_group.allow_ssh.id] #its is a list type declared in this way [ ]
 
