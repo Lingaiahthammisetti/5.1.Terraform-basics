@@ -6,10 +6,10 @@ terraform {
     }
   }
 backend "s3" {
-  bucket ="lingaiah-remote-state"
-  key="remote-state-demo"
+  bucket ="ec2-remote-state"
+  key="create-ec2-key"
   region="us-east-1"
-  dynamodb_table="lingaiah-locking"
+  dynamodb_table="ec2-remote-state-locking"
   }
 }
 provider "aws" {

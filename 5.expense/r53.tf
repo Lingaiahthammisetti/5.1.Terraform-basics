@@ -9,6 +9,10 @@ resource "aws_route53_record" "expense" {
     type = "A"
     ttl  = 1
    
+    # For frontend, aws_instance.expense[frontend].public_ip
+    # For backend,  aws_instance.expense[backend].private_ip
+    # For db,       aws_instance.expense[db].private_ip
+
     records = var.instance_names[count.index] == "frontend" ? [aws_instance.expense[count.index].public_ip] : [aws_instance.expense[count.index].private_ip]
     allow_overwrite = true
 }
