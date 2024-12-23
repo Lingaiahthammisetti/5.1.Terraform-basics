@@ -6,6 +6,7 @@ terraform {
     }
   }
 
+
 backend "s3" {
   bucket ="ec2-remote-state"
   key="create-ec2-key"

@@ -9,7 +9,7 @@ variable "image_id" {
     description ="RHEL-9 AMI ID"  #optional
 }
 variable "instance_type" {
-    default ="t3.micro"
+    default ="t2.micro"
     type = string
 }
 variable "common_tags" {
@@ -43,7 +43,7 @@ variable "allowed_cidr" {
 }
 #r53 variables
 variable "zone_id" {
-    default ="Z02765181CEB7C51AA89M"
+    default ="Z047580725LSLR6NAAF8G"
 }
 variable "domain_name" {
       default = "lingaiah.online"
