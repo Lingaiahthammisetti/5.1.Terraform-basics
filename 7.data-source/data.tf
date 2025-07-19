@@ -18,7 +18,7 @@ data "aws_ami" "ami_id" {
          values = ["hvm"]
   }
 }
-
+#Note: We are collecting default VPC_ID here.
 data "aws_vpc" "default" {
     default = true
 }

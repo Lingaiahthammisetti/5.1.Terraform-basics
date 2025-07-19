@@ -5,6 +5,12 @@ resource "aws_instance" "expense" {
   ami           = var.image_id
   vpc_security_group_ids = [aws_security_group.allow_ssh_expense.id]
   instance_type = var.instance_names[count.index] == "db" ? "t3.small": "t3.micro"
+  root_block_device {
+    volume_size = 50
+    volume_type = "gp3"
+    iops        = 3000
+    encrypted   = true
+  }
 
   tags = merge (
     var.common_tags, {
@@ -34,4 +40,6 @@ resource "aws_security_group" "allow_ssh_expense" {
     Name = "Allow_SSH_Expense"
     Createdby="Lingaiah"
   }
+
+
 }

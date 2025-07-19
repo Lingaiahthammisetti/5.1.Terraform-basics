@@ -1,6 +1,7 @@
 #resource <resource-type> <resource-name>
 
 resource "aws_instance" "ec2_count" {
+  #count = 3
   count = length(var.instance_names)
   ami           = "ami-09c813fb71547fc4f" 
   instance_type = "t2.micro"

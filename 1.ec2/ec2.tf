@@ -16,7 +16,12 @@ resource "aws_security_group" "allow_ssh" { //Here 'allow_ssh' is terraform reso
     protocol         = "-1"
     cidr_blocks      = ["0.0.0.0/0"]
   }
-
+  root_block_device {
+    volume_size = 50
+    volume_type = "gp3"
+    iops        = 3000
+    encrypted   = true
+  }
   tags = { #Here 'allow_ssh','Lingaiah' is the ec2-instance name in AWS, not related to Terrafrom.
     Name = "allow_ssh"
     Createdby="Lingaiah"
