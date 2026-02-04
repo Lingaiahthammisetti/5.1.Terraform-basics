@@ -2,47 +2,16 @@
 
 
 
-EC2 instance creation: Used to launch and manage EC2 instances through code.
-
-
-
-Variables: Help make Terraform code reusable and configurable.
-
-
-
-Conditions: Allow different behavior based on environments like dev or prod.
-
-
-
-Count: Creates multiple identical resources easily.
-
-
-
-Expense project: Uses tags to track and control infrastructure costs.
-
-
-
-Locals: Store common values to avoid repetition.
-
-
-
-Data source: Fetches details of existing AWS resources.
-
-
-
-Remote state: Stores Terraform state centrally for team collaboration.
-
-
-
-for\_each: Creates multiple resources when each one is unique.
-
-
-
-Dynamic block: Generates blocks dynamically based on input values.
-
-
-
-
+* EC2 instance creation: Used to launch and manage EC2 instances through code.
+* Variables: Help make Terraform code reusable and configurable.
+* Conditions: Allow different behavior based on environments like dev or prod.
+* Count: Creates multiple identical resources easily.
+* Expense project: Uses tags to track and control infrastructure costs.
+* Locals: Store common values to avoid repetition.
+* Data source: Fetches details of existing AWS resources.
+* Remote state: Stores Terraform state centrally for team collaboration.
+* for\_each: Creates multiple resources when each one is unique.
+* Dynamic block: Generates blocks dynamically based on input values.
 
 
 
