@@ -40,6 +40,4 @@ resource "aws_security_group" "allow_ssh_expense" {
     Name = "Allow_SSH_Expense"
     Createdby="Lingaiah"
   }
-
-
 }

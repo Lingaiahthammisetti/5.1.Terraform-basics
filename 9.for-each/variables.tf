@@ -1,4 +1,3 @@
-
 variable instance_names {
     type = map
     default = {
@@ -7,7 +6,6 @@ variable instance_names {
         frontend = "t3.micro"
     }
 }
-
 variable "common_tags" {
     type = map
     default = {
@@ -15,7 +13,6 @@ variable "common_tags" {
         Terraform ="true"
     }
 }
-
 variable "domain_name" {
     default = "lingaiah.online"
 }

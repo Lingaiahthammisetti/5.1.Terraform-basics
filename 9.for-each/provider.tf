@@ -5,8 +5,6 @@ terraform {
       version = "5.58.0"
     }
   }
-
-
 backend "s3" {
   bucket ="ec2-remote-state"
   key="create-ec2-key"

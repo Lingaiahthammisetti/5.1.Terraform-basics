@@ -1,5 +1,4 @@
 #resource <resource-type> <resource-name>
-
 resource "aws_instance" "expense_for_each" {
 
   for_each = var.instance_names #each.key and each.value ,db = "t3.small"
