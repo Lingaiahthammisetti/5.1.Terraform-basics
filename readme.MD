@@ -1,4 +1,11 @@
 # Terraform concepts
+
+
+
+
+
+
+
 1. ec2-instance
 2. variables
 3. conditions
@@ -9,3 +16,4 @@
 8. remote-state
 9. for-each-loop
 10. dynamic-block-loop
+
