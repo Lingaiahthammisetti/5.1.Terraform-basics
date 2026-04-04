@@ -1,1 +1,0 @@
-instance_type = "t3.small" # replacing the default variable value.
